@@ -1,4 +1,5 @@
 bin/
 build/
 *.pro.user
-Makefile
+Makefile*
+.qmake*
