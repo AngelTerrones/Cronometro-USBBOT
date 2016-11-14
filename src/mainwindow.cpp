@@ -106,6 +106,9 @@ void MainWindow::slotRecibirSerial()
             m_timer.start(10);
             m_lap++;
         }else{
+            int elapsed = m_timePartial.elapsed();
+            if(elapsed < 200)
+                return;
             qDebug() << "Lap";
             UpdateList();
             m_timePartial.restart();
